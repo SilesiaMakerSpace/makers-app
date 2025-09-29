@@ -43,6 +43,11 @@ RUN chmod +x /bin/hello.sh
 # purposes the "base" image is used here.
 FROM base AS final
 
+RUN npm install --global grunt-cli
+RUN npm install --global nativescript
+RUN npm install --global gulp-cli
+
+
 # Create a non-privileged user that the app will run under.
 # See https://docs.docker.com/go/dockerfile-user-best-practices/
 ARG UID=10001
