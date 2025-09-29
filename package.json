@@ -21,5 +21,9 @@
     "octokit": "^5.0.3",
     "typescript": "~5.4.0",
     "vue": "^3.5.22"
+  },
+  "scripts": {
+    "test": "echo 'ok'",
+    "prepare": "husky"
   }
 }
