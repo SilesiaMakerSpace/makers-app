@@ -2,10 +2,19 @@
 
 version: '3'
 
+env:
+  ANDROID_HOME: "$HOME/Android/Sdk"
+  PATH: "$PATH:$ANDROID_HOME/platform-tool"
+
 vars:
   GREETING: Hello, World!
 
 tasks:
+  clean:
+    cmds:
+      - rm -rf ./node_modules ./platforms ./hooks
+      - npm install
+      - ns build 
   default:
     cmds:
       - echo "{{.GREETING}}"

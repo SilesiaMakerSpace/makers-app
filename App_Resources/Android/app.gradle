@@ -3,6 +3,12 @@ dependencies {
 //  implementation 'androidx.multidex:multidex:2.0.1'
 }
 
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
+}
+
 android {
   compileSdkVersion 34
   buildToolsVersion "34"
